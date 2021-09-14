@@ -22,14 +22,14 @@ const regSchema = new Schema({
         required: [true, 'password required'],
         min: [6, 'password must be greater than {value}']
     },
-    conFirmPassword: {
-        type: String,
-        required: [true, 'please confirm your password'],
-        min: [6, 'confirmed password must be greater than {value}']
-    },
+    
     roles: {
         type: String,
         required: [true, 'please select  role']
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now()
     }
 })
 
